@@ -1,0 +1,44 @@
+\input{vecteurs1-activite4-zellige-reponses}
+
+\newpage
+
+\begin{enumerate}
+	\item Enchaînement 1
+	\vspace{-2em}
+		\begin{enumerate}
+			\item Quelle est l'image du carreau \zellige{26} par la translation de vecteur \vectaffiche{u}~? \textcolor{blue}{C'est le carreau 17.}
+			\item Quelle est l'image de cette image par la translation de vecteur~\vectaffiche{v}~?
+				 \textcolor{cyan}{C'est le carreau 10.}
+			\item Émettre une conjecture sur la nature de la transformation correspondant à l'enchaînement de ces deux translations.
+				 \textcolor{purple}{C'est la translation de vecteur \vectaffiche{u} suivie de la translation de vecteur \vectaffiche{v}.}
+		\end{enumerate}
+\end{enumerate}
+\begin{center}
+	\begin{tikzpicture}[scale=0.45,every node/.style={scale=1}]
+		\vectAuColor{u}{5}{19}{12}{-8}{4pt}{0.5}{above right}{blue};
+		\vectAuColor{v}{17}{11}{-4}{-4}{4pt}{0.5}{above left}{cyan};
+		\draw[->,>=latex,line width=4pt,purple] (5,19) -- (13,7) node[fill=white,pos=0.5,below left] {$\textcolor{purple}{\overrightarrow{u} + \overrightarrow{v}}$};
+		\draw[->,>=latex,line width=4pt,purple] (5,19) -- (13,7); % On retrave le vecteur sur l'étiquette du nom
+	\end{tikzpicture}
+	\fbox{On notera \textcolor{purple}{\vectaffiche{u} + \vectaffiche{v}} les caractéristiques de cette nouvelle transformation}
+\end{center}
+	
+\begin{enumerate}
+	\setcounter{enumi}{1}
+	\item Enchaînement 2
+	\vspace{-2em}
+		\begin{enumerate}
+			\item Quelle est l'image du carreau \zellige{38} par la translation de vecteur \vectaffiche{s}~? \textcolor{red}{C'est le carreau 40.}
+			\item Quelle est l'image de cette image par la translation de vecteur~\vectaffiche{t}~?
+				 \textcolor{red}{C'est le carreau 34.}
+			\item Émettre une conjecture sur \vectaffiche{s} + \vectaffiche{t}. \textcolor{red}{C'est la translation de vecteur \vectaffiche{s} suivie de la translation de vecteur \vectaffiche{t}.}
+		\end{enumerate}
+	\item Enchaînement 3
+	\vspace{-2em}
+		\begin{enumerate}
+			\item Quelle est l'image du carreau \zellige{22} par la translation de vecteur \vectaffiche{v}~? \textcolor{red}{C'est le carreau 15.}
+			\item Quelle est l'image de cette image par la translation de vecteur~\vectaffiche{r}~?
+				 \textcolor{red}{C'est le carreau 22.}
+			\item Émettre une conjecture sur \vectaffiche{v} + \vectaffiche{r}. \textcolor{red}{On revient sur le carreau de départ. \vectaffiche{v} + \vectaffiche{r} est le vecteur nul :  \vectaffiche{v} + \vectaffiche{r} $=$ \vectaffiche{0}.}
+		\end{enumerate}
+\end{enumerate}

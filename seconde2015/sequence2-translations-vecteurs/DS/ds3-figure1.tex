@@ -1,0 +1,30 @@
+\begin{center}
+\begin{tikzpicture}[scale=0.8,every node/.style={scale=1}]
+	\tikzstyle{vect}=[->,>=stealth,very thick]
+	\tikzstyle{vectred}=[vect,red]
+	\tikzstyle{etiquette}=[fill=white,
+							midway,
+							sloped,
+							above]
+								
+\grille{0}{0}{11}{9}{help lines};
+
+\coordinate (A) at (2,5);
+\coordinate (B) at (6,6);
+\coordinate (C) at (5,3);
+\coordinate (D) at (1,2);
+\coordinate (E) at (2,1);
+\coordinate (F) at (7,5);
+\coordinate (G) at (10,7);
+\coordinate (H) at (2,7);
+\coordinate (X) at (7,2);
+\coordinate (Y) at (8,5);
+\coordinate (Z) at (9,4);
+\foreach \point in {A, ..., H, X, Y, Z}
+	\draw (\point) node{$\times$} node[below right]{$\point$};
+
+
+%\draw[vectred] (A) -- (B);
+
+\end{tikzpicture}
+\end{center}

@@ -1,0 +1,40 @@
+\documentclass[10pt,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{uququq}{rgb}{0.25,0.25,0.25}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+\definecolor{xdxdff}{rgb}{0.49,0.49,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=2.85,every node/.style={scale=3}]
+\clip(-1.5,-0.5) rectangle (3.5,4);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (0,0) -- (2,0) -- (3,1.73) -- (2,3.46) -- (0,3.46) -- (-1,1.73) -- cycle;
+\draw [color=zzttqq] (0,0)-- (2,0);
+\draw [color=zzttqq] (2,0)-- (3,1.73);
+\draw [color=zzttqq] (3,1.73)-- (2,3.46);
+\draw [color=zzttqq] (2,3.46)-- (0,3.46);
+\draw [color=zzttqq] (0,3.46)-- (-1,1.73);
+\draw [color=zzttqq] (-1,1.73)-- (0,0);
+\draw (2,0)-- (0,0);
+\draw (2,3.46)-- (0,0);
+\draw (-1,1.73)-- (3,1.73);
+\draw (0,3.46)-- (2,0);
+\begin{scriptsize}
+\fill [color=xdxdff] (0,0) circle (1pt);
+\draw[color=xdxdff] (-0.05,-0.3) node {$A$};
+\fill [color=xdxdff] (2,0) circle (1pt);
+\draw[color=xdxdff] (2.07,-0.3) node {$B$};
+\fill [color=uququq] (3,1.73) circle (1pt);
+\draw[color=uququq] (3.35,1.77) node {$C$};
+\fill [color=uququq] (2,3.46) circle (1pt);
+\draw[color=uququq] (2.14,3.75) node {$D$};
+\fill [color=uququq] (0,3.46) circle (1pt);
+\draw[color=uququq] (-0.07,3.78) node {$E$};
+\fill [color=uququq] (-1,1.73) circle (1pt);
+\draw[color=uququq] (-1.34,1.78) node {$F$};
+\fill [color=uququq] (1,1.73) circle (1pt);
+\draw[color=uququq] (1,1.25) node {$G$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

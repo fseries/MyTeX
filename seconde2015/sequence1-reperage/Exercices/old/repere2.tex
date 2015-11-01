@@ -1,0 +1,37 @@
+			\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=1,every node/.style={scale=1}]
+			
+			\tikzstyle{tiret}=[dash pattern=on 3pt off 3pt];
+			\tikzstyle{domaine}=[domain=-5:8];
+			\clip(-3.5,-2.5) rectangle (5.5,2.5);
+			\draw [domaine] plot(\x,{(-0-0*\x)/1});
+			\draw [domaine] plot(\x,{(-0--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(-1--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(-2--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(-3--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(-4--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(-5--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(--1--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(--2--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(--3--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(--1-0*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(--2-0*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(-1-0*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(-2-0*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(--4--1*\x)/1});
+			\draw [tiret,domaine] plot(\x,{(-6--1*\x)/1});
+			\draw [domaine] plot(\x,{(-0-0*\x)/-1});
+			\draw [domaine] plot(\x,{(-0-0*\x)/-1});
+			\draw [domaine] plot(\x,{(-0-0*\x)/-1});
+			\begin{scriptsize}
+			\draw (0,0) node {$\times$} node[above left] {$A$};
+			\draw (1,0) node {$\times$} node[above left] {$I$};
+			\draw (1,1) node {$\times$} node[above left] {$J$};
+			\draw (3,0) node {$\times$} node[above left] {$E$};
+			\draw (5,2) node {$\times$} node[above left] {$F$};
+			\draw (1,-1) node {$\times$} node[above left] {$D$};
+			\draw (-2,-2) node {$\times$} node[above left] {$C$};
+			\draw (-2,2) node {$\times$} node[above left] {$B$};
+			\draw (-3,0) node {$\times$} node[above left] {$G$};
+			\draw (-3,-1) node {$\times$} node[above left] {$H$};
+			\end{scriptsize}
+			\end{tikzpicture}

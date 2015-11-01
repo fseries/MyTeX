@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=0.7,xscale=2,every node/.style={scale=1}]
+\tkzSetUpPoint[shape=cross]%,size=20pt,color=teal,fill=teal]
+\tkzInit[xmin=-0.3,xmax=3.3, ymin=-4,ymax=6]
+\tkzGrid[sub,subxstep=.5,subystep=1]
+\tkzAxeXY
+\tkzFct[smooth,samples=20,domain = -0.3:3.3]{4*(\x)**2-12*(\x)+5}
+\tkzFct[samples=2,domain = -0.3:3.3]{(10-8*\x)/2}
+\tkzDefPointByFct[draw,ref=A](0)
+\tkzLabelPoint[above right](A){$A$}
+\tkzCrossPoint{A}
+%\draw (A) node {$\times$};
+\tkzDefPointByFct[draw,ref=B](2)
+\tkzLabelPoint[above right](B){$B$}
+\tkzCrossPoint{B}
+\tkzText(0.85,2.5){$\mathcal{C}_{g}$}
+\tkzText(2.7,3.5){$\mathcal{C}_{f}$}
+\end{tikzpicture}

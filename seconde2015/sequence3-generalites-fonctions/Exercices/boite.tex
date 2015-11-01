@@ -1,0 +1,52 @@
+\begin{tikzpicture}[scale=0.4,every node/.style={scale=1}]
+	\coordinate (A) at (0,0);
+	\coordinate (B) at (7,5);
+	\coordinate (C) at (1,1);
+	\coordinate (D) at (6,4);
+	\coordinate (E) at (7,0);
+	\coordinate (F) at (0,5);
+	\coordinate (G) at (6,1);
+	\coordinate (H) at (1,4);
+	\draw (A) rectangle (B);
+	\draw (A) rectangle (C);
+	\draw (B) rectangle (D);
+	\draw (E) rectangle (G);
+	\draw (F) rectangle (H);
+	
+	\path (A) -- (C) node[scale=2,midway]{$\times$};
+	\path (B) -- (D) node[scale=2,midway]{$\times$};
+	\path (E) -- (G) node[scale=2,midway]{$\times$};
+	\path (F) -- (H) node[scale=2,midway]{$\times$};
+	
+	\draw [dotted] (H) -- (D) -- (G) -- (C) -- cycle;
+	
+%\draw (11,2)-- (14,2);
+%\draw (14,2)-- (14,3);
+%\draw (14,3)-- (11,3);
+%\draw (11,3)-- (11,2);
+%\draw (11,3)-- (15,5);
+%\draw (15,5)-- (18,5);
+%\draw (18,5)-- (18,4);
+%\draw (18,4)-- (14,2);
+%\draw (14,3)-- (18,5);
+%\draw (15,4)-- (15,5);
+%\draw [dash pattern=on 2pt off 2pt] (11,2)-- (13,3);
+%\draw [dash pattern=on 2pt off 2pt] (16,4)-- (18,4);
+%\draw (13,3)-- (15,4);
+%\draw (15,4)-- (16,4);
+
+\draw (11,1)-- (16,1);
+\draw (16,1)-- (16,2);
+\draw (16,2)-- (11,2);
+\draw (11,2)-- (11,1);
+\draw (11,2)-- (17,5);
+\draw (17,5)-- (22,5);
+\draw (22,5)-- (22,4);
+\draw (22,4)-- (16,1);
+\draw (16,2)-- (22,5);
+\draw (17,4)-- (17,5);
+\draw [dash pattern=on 2pt off 2pt] (11,1)-- (13,2);
+\draw [dash pattern=on 2pt off 2pt] (20,4)-- (22,4);
+\draw (13,2)-- (17,4);
+\draw (17,4)-- (20,4);
+\end{tikzpicture}

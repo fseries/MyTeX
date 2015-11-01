@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=0.7,every node/.style={scale=0.75}]
+%\tkzSetUpPoint[shape=cross,size=20pt,color=teal,fill=teal]
+\tkzInit[xmin=0,xmax=10, ymin=0,ymax=0.5,xstep=1,ystep=0.05]
+\tkzGrid[sub,subxstep=1,subystep=0.01]
+\tkzAxeXY
+%\tkzFct[smooth,samples=200,domain = 0:10]{exp(- exp(((0 - \x)/(2))))}
+% Densité de proba de la loi de Gumbel avec \beta = 3
+\tkzFct[smooth,samples=200,domain = 0:10]{\x*exp(- \x)/1}
+\tkzDefPointByFct[draw,ref=A](0)
+\tkzLabelPoint[above right](A){$A$}
+\tkzCrossPoint{A}
+\tkzDefPointByFct[draw,ref=B](1)
+\tkzLabelPoint[above right](B){$B$}
+\tkzCrossPoint{B}
+\tkzDefPointByFct[draw,ref=C](10)
+\tkzLabelPoint[above](C){$C$}
+\tkzCrossPoint{C}
+%\tkzText(8.5,2.5){$\mathcal{C}_{g}$}
+%\tkzText(1.5,2.5){$\mathcal{C}_{f}$}
+\end{tikzpicture}

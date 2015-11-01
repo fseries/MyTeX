@@ -1,0 +1,307 @@
+\documentclass[a4paper,12pt,twocolumn,landscape]{article}
+
+\usepackage{FabZ}
+\usepackage{vecteurs}
+\usepackage{repere}
+\usepackage{paralist}
+
+\usepackage{geometry}
+\geometry{hmargin=0.5cm,vmargin=1.5cm}
+
+\newcommand{\milieu}[6]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{B_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{$\pointcoord{M_{\theenumi}}{#5}{#6}$}}
+
+\newcommand{\extremite}[6]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{M_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{$\pointcoord{B_{\theenumi}}{#5}{#6}$}}
+
+\newcommand{\longueur}[5]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{B_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{Longueur $A_{\theenumi}B_{\theenumi}$ = $#5$}}
+
+\newcommand{\quadrilatere}[9]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_\theenumi}{#3}{#4}$ $\pointcoord{C_{\theenumi}}{#5}{#6}$, $\pointcoord{D_\theenumi}{#7}{#8}$ \\ \textcolor{red}{$A_{\theenumi}B_{\theenumi}C_{\theenumi}D_{\theenumi}$ est un #9.}}
+
+\newcommand{\parallelogrammeManqueA}[8]{$\pointcoord{B_{\theenumi}}{#1}{#2}$, $\pointcoord{C_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{A_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueB}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{C_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{B_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueC}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{C_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueD}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_{\theenumi}}{#3}{#4}$ $\pointcoord{C_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{D_{\theenumi}}{#7}{#8}$}}
+
+
+\newcommand{\quelconqueparallelogramme}[8]{
+\coordinate (A) at (#1,#2);
+\coordinate (B) at (#3,#4);
+\coordinate (C) at (#5,#6);
+\coordinate (D) at (#7,#8);
+%\foreach \point in {A, ..., D}
+%	\draw (\point) node{$\point$};
+\draw[thick,blue] (A) -- (B) -- (C) -- (D) -- cycle;
+\coordinate (I) at  (#1/2+#3/2,#2/2+#4/2);
+\coordinate (J) at  (#3/2+#5/2,#4/2+#6/2);
+\coordinate (K) at  (#5/2+#7/2,#6/2+#8/2);
+\coordinate (L) at  (#7/2+#1/2,#8/2+#2/2);
+\draw[thick,red] (I) -- (J) -- (K) -- (L) -- cycle;
+}
+
+%
+%\setlength{\headheight}{0pt}
+%\pagestyle{fancyplain}
+%\fancyhf{}
+%\lhead[]{\textbf{TD Vecteurs}}
+%\chead[]{}
+%\rhead[]{}
+%
+%\lfoot[]{}
+%\cfoot[]{}
+%\rfoot[]{}
+%%\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+
+\fancypagestyle{firststyle}
+{
+	\setlength{\headheight}{0em}
+	\fancyhf{}
+	\lhead[]{}
+	\chead[]{\textbf{Exercices : Les vecteurs}}
+	\rhead[]{}
+
+	\lfoot[]{}
+	\cfoot[]{}
+	\rfoot[]{}
+%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+}
+
+\fancypagestyle{vide}
+{
+	\setlength{\headheight}{0em}
+	\pagestyle{fancyplain}
+	\def\headrulewidth{0em}
+	\fancyhf{}
+	\lhead[]{}
+	\chead[]{}
+	\rhead[]{}
+	
+	\lfoot[]{}
+	\cfoot[]{}
+	\rfoot[]{}
+%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+}
+
+\usetikzlibrary{fadings}
+\newcommand{\Fin}{node[xshift=-1.5ex,rotate=10]{F}
+node[rotate=170]{i}
+node[xshift=1.5ex,rotate=45]{n}}
+
+\newcommand{\bonnesvacances}{node[xshift=0ex,rotate=10]{B}
+node[xshift=1*1.5ex,rotate=170]{o}
+node[xshift=2*1.5ex,rotate=45]{n}
+node[xshift=3*1.5ex,rotate=128]{n}
+node[xshift=4*1.5ex,rotate=75]{e}
+node[xshift=5*1.5ex,rotate=130]{s}
+node[xshift=6*1.5ex,rotate=85]{~}
+node[xshift=7*1.5ex,rotate=128]{v}
+node[xshift=8*1.5ex,rotate=43]{a}
+node[xshift=9*1.5ex,rotate=4]{c}
+node[xshift=10*1.5ex,rotate=145]{a}
+node[xshift=11*1.5ex,rotate=5]{n}
+node[xshift=12*1.5ex,rotate=25]{c}
+node[xshift=13*1.5ex,rotate=105]{e}
+node[xshift=14*1.5ex,rotate=45]{s}
+}
+
+\renewcommand{\vect}[9]{
+	\coordinate(#1) at (#3,#4);
+	\coordinate(#2) at (#5,#6);
+	\draw (#1) -- (#2) node [fill=white,midway,above,sloped] {
+	%$\textcolor{#9}{\overrightarrow{#1#2}}$
+	};
+	\draw (#1) node [fill=white,#7] {#1};
+	\draw (#2) node [fill=white,#8] {#2};
+	\draw [->,>=stealth,line width=1.5pt] (#1) -- (#2);
+}
+
+\begin{document}
+
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{firststyle}
+
+\exercice Placez 2 points $A$ et $B$ et tracez le vecteur~\vectaffiche{AB}.
+\begin{enumerate}
+	\item Construisez un vecteur opposé à \vectaffiche{AB}.
+	\item Construisez un vecteur de même direction et de même sens que \vectaffiche{AB} et qui n'est pas égal à \vectaffiche{AB}.
+	\item Construisez un vecteur de même direction que \vectaffiche{AB} mais de sens contraire et qui n'est pas égal à \vectaffiche{BA}.
+\end{enumerate}
+
+\exercice À partir de la figure ci-dessous,
+\begin{enumerate}
+	\item donnez les images des points $C$, $D$ et $E$ par la translation de~vecteur~\vectaffiche{AB},
+	\item citez 3 vecteurs égaux au vecteur \vectaffiche{AB},
+	\item citez 3 parallélogrammes ayant $A$ et $B$ parmi leurs sommets et définis par les égalités vectorielles de la question précédente.
+\end{enumerate}
+\begin{center}
+\begin{tikzpicture}[scale=0.8,every node/.style={scale=1}]
+	\tikzstyle{vect}=[->,>=stealth,very thick]
+	\tikzstyle{vectred}=[vect,red]
+	\tikzstyle{etiquette}=[fill=white,
+							midway,
+							sloped,
+							above]
+								
+\grille{0}{0}{9}{7}{thick};
+
+\coordinate (A) at (2,5);
+\coordinate (B) at (5,6);
+\coordinate (C) at (3,3);
+\coordinate (D) at (5,2);
+\coordinate (E) at (2,1);
+\coordinate (X) at (7,2);
+\coordinate (Y) at (6,4);
+\coordinate (Z) at (8,3);
+\foreach \point in {A, ..., E, X, Y, Z}
+	\draw (\point) node{$\times$} node[below right]{$\point$};
+	
+\draw[vectred] (A) -- (B);
+
+\end{tikzpicture}
+\end{center}
+
+\exercice Construisez un carré $ABCD$ de côté 5~carreaux et de centre $O$. Construisez ensuite l'image de ce carré~:
+\begin{enumerate}
+	\item (en noir) par la translation de vecteur \vectaffiche{AB}
+	\item (en bleu) par la translation de vecteur \vectaffiche{DB}
+	\item (en vert) par la translation de vecteur \vectaffiche{OB}
+\end{enumerate}
+
+\vspace*{-5em}
+
+\end{minipage}
+\newpage
+
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{firststyle}
+
+\exercice Placez 3 points $A$, $B$ et $C$, tracez le triangle $ABC$ puis construisez l'image de ce triangle par la translation de vecteur \vectaffiche{CA}.\\
+
+\exercice À partir de la figure ci-dessous, citez un vecteur~:
+\begin{enumerate}
+	\item opposé à \vectaffiche{CD},
+	\item de même direction et de même sens que \vectaffiche{AC},
+	\item de même direction que \vectaffiche{BC} mais de sens contraire,
+	\item égal au vecteur \vectaffiche{BA}.
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8,every node/.style={scale=1}]
+	\tikzstyle{vect}=[->,>=stealth,very thick]
+	\tikzstyle{vectred}=[vect,red]
+	\tikzstyle{etiquette}=[fill=white,
+							midway,
+							sloped,
+							above]
+								
+\grille{0}{0}{10}{9}{thick};
+
+\coordinate (A) at (3,4);
+\coordinate (B) at (1,1);
+\coordinate (C) at (3,1);
+\coordinate (D) at (4,2);
+\foreach \point in {A, ..., D}
+	\draw (\point) node{$\times$} node[below right]{$\point$};
+	
+
+\draw[vectred] (9,5) -- ++ (0,-1) node[etiquette]{$\overrightarrow{m}$};
+\draw[vectred] (9,5) -- ++ (0,-1); % on repasse la fleche car fleche trop courte
+
+\draw[vectred] (9,2) -- ++ (-1,-1) node[etiquette]{$\overrightarrow{p}$};
+
+\draw[vectred] (5,6) -- ++ (1,1) node[etiquette]{$\overrightarrow{r}$};
+
+\draw[vectred] (8,8) -- ++ (-2,-5) node[etiquette]{$\overrightarrow{s}$};
+
+\draw[vectred] (8,8) -- ++ (-1,0) node[etiquette]{$\overrightarrow{t}$};
+\draw[vectred] (8,8) -- ++ (-1,0);
+
+\draw[vectred] (0,3) -- ++ (1,0) node[etiquette]{$\overrightarrow{u}$};
+\draw[vectred] (0,3) -- ++ (1,0);
+
+\draw[vectred] (1,5) -- ++ (2,3) node[etiquette]{$\overrightarrow{v}$};
+
+\draw[vectred] (4,5) -- ++ (0,2) node[etiquette]{$\overrightarrow{w}$};
+
+\end{tikzpicture}
+\end{center}
+
+\exercice (figure de l'exercice précédent)
+\begin{enumerate}
+	\item Placez les points $E$, $F$, $G$ et $H$, images respectives du point $A$ par les translations de vecteurs~:
+	\begin{inparaenum}\\
+		\hspace*{0pt}
+		\item \vectaffiche{w}\hspace*{\stretch{1}}
+		\item \vectaffiche{v}\hspace*{\stretch{1}}
+		\item \vectaffiche{p}\hspace*{\stretch{1}}
+		\item \vectaffiche{m}\hspace*{\stretch{1}}~
+	\end{inparaenum}
+	\item Placez les points $I$, $J$, $K$ et $L$, images respectives du point $B$ par les translations de vecteurs~:
+	\begin{inparaenum}\\
+		\hspace*{0pt}
+		\item \vectaffiche{r}\hspace*{\stretch{1}}
+		\item \vectaffiche{u}\hspace*{\stretch{1}}
+		\item \vectaffiche{w}\hspace*{\stretch{1}}
+		\item \vectaffiche{m}\hspace*{\stretch{1}}~
+	\end{inparaenum}
+	\item En utilisant les lettres de la figure~:
+	\begin{enumerate}
+		\item citez 2 vecteurs égaux à \vectaffiche{AB}
+		\item citez 2 vecteurs opposés à \vectaffiche{AB}
+	\end{enumerate}
+\end{enumerate}
+
+
+\end{minipage}
+\end{document}
+%
+%
+%\paragraph{Exercice~2} Propriétés des quadrilatères
+%
+%\begin{tikzpicture}[scale=1,every node/.style={scale=0.7}]
+%\tikzstyle{debutfin}=[ellipse,draw,text=red]
+%\tikzstyle{instruct}=[rectangle,draw,fill=yellow!50]
+%\tikzstyle{test}=[diamond, aspect=6,thick,
+%draw=blue,fill=yellow!50,text=blue]
+%\tikzstyle{es}=[rectangle,draw,rounded corners=4pt,fill=blue!25]
+%
+%\node[debutfin] (debut) at (0,3) {Début};
+%\node[es] (lire) at (0,2) {Prendre un quadrilatère $Q$};
+%\node[test] (test) at (0,0) {Les diagonales ont-elles un milieu commun \ ?};
+%%\node[instruct] (init) at (-2,2.5) {$S\leftarrow 0$};
+%\node[instruct] (plus) at (0,-2.5) {$S\leftarrow S+N$};
+%\node[instruct] (moins) at (0,-3.5) {$N\leftarrow N-1$};
+%\node[es] (afficher) at (-4,-2) {Afficher la somme $S$};
+%\node[debutfin] (fin) at (-4,-3) {Fin};
+%
+%\tikzstyle{suite}=[->,>=stealth,thick,rounded corners=4pt]
+%\draw[suite](debut) -- (lire);
+%\draw[suite](lire) -- (test.north);
+%%\draw[suite](init) -- (test.north);
+%\draw[suite](test.south) -- (plus);
+%\draw[suite](plus) -- (moins);
+%\draw[suite](test) -| (afficher);
+%\draw[suite](afficher) -- (fin);
+%\end{tikzpicture}
+%
+%
+%%%%%\begin{tikzpicture}
+%%%%%% définition des styles
+%%%%%\tikzstyle{quadri}=[rectangle,draw,fill=yellow!50,text=blue]
+%%%%%\tikzstyle{estun}=[->,>=latex,very thick,dotted]
+%%%%%% les nœuds
+%%%%%\node[quadri] (Q) at (0,3) {Quadrilatère};
+%%%%%\node[quadri] (P) at (0,1.5) {Parallélogramme};
+%%%%%\node[quadri] (R) at (-3,0) {Rectangle};
+%%%%%\node[quadri] (L) at (3,0) {Losange};
+%%%%%\node[quadri] (C) at (5,-1.5) {Carré};
+%%%%%% les flèches
+%%%%%\draw[estun] (P)--(Q);
+%%%%%\draw[estun] (R)to[bend left](Q); \draw[estun] (R)--(P);
+%%%%%\draw[estun] (L)--(Q.south east); \draw[estun] (L)--(P);
+%%%%%\draw[estun] (C)to[bend right](Q.east); \draw[estun] (C)to[bend left](P);
+%%%%%\draw[estun] (C)--(L.south east); \draw[estun] (C)to[bend left](R);
+%%%%%% la légende
+%%%%%\draw[estun] (-4.5,2.5)--(-3,2.5)node[midway,above]{est un};
+%%%%%\end{tikzpicture}

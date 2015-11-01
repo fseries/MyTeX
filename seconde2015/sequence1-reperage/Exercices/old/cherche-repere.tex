@@ -1,0 +1,25 @@
+Le quadrilatère $ABCD$ ci-dessous a été dessiné dans un repère orthonormé qui a disparu.
+Retrouvez le repère initial à partir des coordonnées des points : $\pointcoord{A}{-4}{2}$, $\pointcoord{B}{2}{-6}$,  $\pointcoord{C}{3}{6}$ et $\pointcoord{D}{1}{2}$.
+
+
+\begin{tikzpicture}[scale=1,every node/.style={scale=1}]
+	\begin{scope}[scale=0.9,rotate=50]
+		\clip (1,0) circle (7);
+		\placerpoint{A}{-4}{2}{below left};
+		\placerpoint{B}{2}{-6}{below right};
+		\placerpoint{C}{3}{6}{above left};
+		\placerpoint{D}{1}{2}{below right};
+		\draw (A) -- (B) -- (C) -- (D) -- cycle;
+		% Correction
+%		\draw[dashed,red] (-10,-20) -- (D);
+%		\draw[dashed,red] (10,20) -- (C);
+%		\draw[red] (-10,0) -- (10,0)
+%			node[rotate=50,sloped,pos=0.55]{$|$}
+%			node[rotate=50,sloped,pos=0.55,below right]{$I$};
+%		\draw[red] (0,-10) -- (0,10)
+%			node[rotate=50,sloped,pos=0.55]{$|$}
+%			node[rotate=50,pos=0.55,above left]{$J$};
+%		\draw[red] (0,0)
+%			node[rotate=50,below left]{$O$};
+	\end{scope}
+\end{tikzpicture}

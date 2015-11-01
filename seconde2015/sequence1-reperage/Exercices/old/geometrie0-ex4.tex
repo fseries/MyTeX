@@ -1,0 +1,213 @@
+\documentclass[a4paper,12pt,twocolumn,landscape]{article}
+
+\usepackage{FabZ}
+\usepackage{vecteurs}
+\usepackage{repere}
+
+\usepackage{geometry}
+\geometry{hmargin=0.5cm,vmargin=1.5cm}
+
+\newcommand{\milieu}[6]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{B_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{$\pointcoord{M_{\theenumi}}{#5}{#6}$}}
+
+\newcommand{\extremite}[6]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{M_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{$\pointcoord{B_{\theenumi}}{#5}{#6}$}}
+
+\newcommand{\longueur}[5]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{B_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{Longueur $A_{\theenumi}B_{\theenumi}$ = $#5$}}
+
+\newcommand{\quadrilatere}[9]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_\theenumi}{#3}{#4}$ $\pointcoord{C_{\theenumi}}{#5}{#6}$, $\pointcoord{D_\theenumi}{#7}{#8}$ \\ \textcolor{red}{$A_{\theenumi}B_{\theenumi}C_{\theenumi}D_{\theenumi}$ est un #9.}}
+
+\newcommand{\parallelogrammeManqueA}[8]{$\pointcoord{B_{\theenumi}}{#1}{#2}$, $\pointcoord{C_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{A_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueB}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{C_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{B_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueC}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{C_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueD}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_{\theenumi}}{#3}{#4}$ $\pointcoord{C_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{D_{\theenumi}}{#7}{#8}$}}
+
+%
+%\setlength{\headheight}{0pt}
+%\pagestyle{fancyplain}
+%\fancyhf{}
+%\lhead[]{\textbf{TD Vecteurs}}
+%\chead[]{}
+%\rhead[]{}
+%
+%\lfoot[]{}
+%\cfoot[]{}
+%\rfoot[]{}
+%%\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+
+\fancypagestyle{firststyle}
+{
+	\setlength{\headheight}{0em}
+	\fancyhf{}
+	\lhead[]{}
+	\chead[]{\textbf{Repérage dans le plan}}
+	\rhead[]{}
+
+	\lfoot[]{}
+	\cfoot[]{}
+	\rfoot[]{}
+%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+}
+
+\fancypagestyle{vide}
+{
+	\setlength{\headheight}{0em}
+	\pagestyle{fancyplain}
+	\def\headrulewidth{0em}
+	\fancyhf{}
+	\lhead[]{}
+	\chead[]{}
+	\rhead[]{}
+	
+	\lfoot[]{}
+	\cfoot[]{}
+	\rfoot[]{}
+%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+}
+
+\usetikzlibrary{fadings}
+\newcommand{\Fin}{node[xshift=-1.5ex,rotate=10]{F}
+node[rotate=170]{i}
+node[xshift=1.5ex,rotate=45]{n}}
+
+\newcommand{\bonnesvacances}{node[xshift=0ex,rotate=10]{B}
+node[xshift=1*1.5ex,rotate=170]{o}
+node[xshift=2*1.5ex,rotate=45]{n}
+node[xshift=3*1.5ex,rotate=128]{n}
+node[xshift=4*1.5ex,rotate=75]{e}
+node[xshift=5*1.5ex,rotate=130]{s}
+node[xshift=6*1.5ex,rotate=85]{~}
+node[xshift=7*1.5ex,rotate=128]{v}
+node[xshift=8*1.5ex,rotate=43]{a}
+node[xshift=9*1.5ex,rotate=4]{c}
+node[xshift=10*1.5ex,rotate=145]{a}
+node[xshift=11*1.5ex,rotate=5]{n}
+node[xshift=12*1.5ex,rotate=25]{c}
+node[xshift=13*1.5ex,rotate=105]{e}
+node[xshift=14*1.5ex,rotate=45]{s}
+}
+
+
+\begin{document}
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{firststyle}
+
+\vspace*{1em}
+
+\paragraph{Exercice~1} Déterminer les coordonnées du point $M_i$ milieu du segment $[A_iB_i]$ dans chacun des cas suivants~:
+
+\begin{enumerate}
+	\item \milieu{2}{4}{10}{2}{6}{3}
+	\item \milieu{4}{0}{10}{4}{7}{2}
+	\item \milieu{5}{50}{30}{10}{17,5}{30}
+	\item \milieu{-20}{50}{30}{10}{5}{30}
+	\item \milieu{-10}{-50}{-70}{-20}{-40}{-35}	
+	\item \milieu{-20}{-20}{-60}{-40}{-40}{10}
+	\item \milieu{-10}{-20}{-40}{10}{-25}{-5}
+	\item \milieu{1200}{-400}{-800}{400}{200}{0}
+	\item \milieu{18,5}{-1}{25}{25}{21,75}{12}
+	\item \milieu{-10}{-20}{-40}{10}{-25}{-5}
+\end{enumerate}
+
+\paragraph{Exercice~2} Déterminer les coordonnées du point $B_i$ extrêmité du segment $[A_iB_i]$ dans chacun des cas suivants avec les coordonnées de $M_i$ milieu de $[A_iB_i]$ données~:
+
+\begin{enumerate}
+	\item \extremite{1}{1}{5}{3}{9}{5}
+	\item \extremite{2}{2}{5}{4}{8}{6}
+	\item \extremite{-3}{1}{1}{3}{5}{5}
+	\item \extremite{-3}{-2}{-0.5}{1}{2}{4}
+	
+	\item \extremite{10,1}{8,2}{11,1}{7,4}{12,1}{6,6}
+	\item \extremite{3,2}{8,5}{-1,1}{5,7}{-5,4}{2,9}
+	
+	\item \extremite{-20}{-40}{90}{10}{200}{60}
+	\item \extremite{-100}{-40}{200}{15}{500}{70}
+	\item \extremite{-120}{40}{-90}{55}{-60}{70}
+	
+	\item \extremite{15000}{200}{11000}{900}{7000}{1600}
+\end{enumerate}
+
+\vspace{-2em}
+
+\end{minipage}
+\newpage
+\begin{minipage}{0.45\textwidth}
+\thispagestyle{firststyle}
+
+\vspace*{1em}
+
+\paragraph{Exercice~3} Dans chacun des cas suivants, le quadrilatère $A_iB_iC_iD_i$ est un parallélogramme. On connait les coordonnées de 3 de ses sommets seulement. Déterminer les coordonnées du quatrième sommet~:
+	\begin{enumerate}
+		\item \parallelogrammeManqueD{1}{1}{9}{2}{10}{6}{2}{5}
+		\item \parallelogrammeManqueB{1}{3}{9}{5}{4}{7}{6}{1}
+		\item \parallelogrammeManqueC{-1}{2}{4}{-2}{1}{4}{6}{0}
+		
+		\item \parallelogrammeManqueA{6}{2}{7}{7}{3}{4}{2}{-1}
+		\item \parallelogrammeManqueD{-2}{2}{2}{10}{4}{6}{0}{-2}
+		\item \parallelogrammeManqueA{18}{8}{14}{14}{-3}{10}{1}{4}
+		\item \parallelogrammeManqueB{5,5}{2,5}{8,5}{6,5}{1,5}{5,5}{12,5}{3,5}
+
+		\item \parallelogrammeManqueC{-40}{-20}{20}{-10}{-30}{10}{30}{20}
+		
+		\item \parallelogrammeManqueC{-150}{-50}{20}{-30}{-80}{25}{90}{45}
+		
+		\item \parallelogrammeManqueD{83}{28}{25}{-31}{-16}{-17}{42}{42}
+	\end{enumerate}
+
+\paragraph{Exercice~4} 
+
+%\vspace{-2em}
+
+\end{minipage}
+\end{document}
+%
+%
+%\paragraph{Exercice~2} Propriétés des quadrilatères
+%
+%\begin{tikzpicture}[scale=1,every node/.style={scale=0.7}]
+%\tikzstyle{debutfin}=[ellipse,draw,text=red]
+%\tikzstyle{instruct}=[rectangle,draw,fill=yellow!50]
+%\tikzstyle{test}=[diamond, aspect=6,thick,
+%draw=blue,fill=yellow!50,text=blue]
+%\tikzstyle{es}=[rectangle,draw,rounded corners=4pt,fill=blue!25]
+%
+%\node[debutfin] (debut) at (0,3) {Début};
+%\node[es] (lire) at (0,2) {Prendre un quadrilatère $Q$};
+%\node[test] (test) at (0,0) {Les diagonales ont-elles un milieu commun \ ?};
+%%\node[instruct] (init) at (-2,2.5) {$S\leftarrow 0$};
+%\node[instruct] (plus) at (0,-2.5) {$S\leftarrow S+N$};
+%\node[instruct] (moins) at (0,-3.5) {$N\leftarrow N-1$};
+%\node[es] (afficher) at (-4,-2) {Afficher la somme $S$};
+%\node[debutfin] (fin) at (-4,-3) {Fin};
+%
+%\tikzstyle{suite}=[->,>=stealth,thick,rounded corners=4pt]
+%\draw[suite](debut) -- (lire);
+%\draw[suite](lire) -- (test.north);
+%%\draw[suite](init) -- (test.north);
+%\draw[suite](test.south) -- (plus);
+%\draw[suite](plus) -- (moins);
+%\draw[suite](test) -| (afficher);
+%\draw[suite](afficher) -- (fin);
+%\end{tikzpicture}
+%
+%
+%%%%%\begin{tikzpicture}
+%%%%%% définition des styles
+%%%%%\tikzstyle{quadri}=[rectangle,draw,fill=yellow!50,text=blue]
+%%%%%\tikzstyle{estun}=[->,>=latex,very thick,dotted]
+%%%%%% les nœuds
+%%%%%\node[quadri] (Q) at (0,3) {Quadrilatère};
+%%%%%\node[quadri] (P) at (0,1.5) {Parallélogramme};
+%%%%%\node[quadri] (R) at (-3,0) {Rectangle};
+%%%%%\node[quadri] (L) at (3,0) {Losange};
+%%%%%\node[quadri] (C) at (5,-1.5) {Carré};
+%%%%%% les flèches
+%%%%%\draw[estun] (P)--(Q);
+%%%%%\draw[estun] (R)to[bend left](Q); \draw[estun] (R)--(P);
+%%%%%\draw[estun] (L)--(Q.south east); \draw[estun] (L)--(P);
+%%%%%\draw[estun] (C)to[bend right](Q.east); \draw[estun] (C)to[bend left](P);
+%%%%%\draw[estun] (C)--(L.south east); \draw[estun] (C)to[bend left](R);
+%%%%%% la légende
+%%%%%\draw[estun] (-4.5,2.5)--(-3,2.5)node[midway,above]{est un};
+%%%%%\end{tikzpicture}

@@ -1,0 +1,86 @@
+\exercice Lire les coordonnées des points suivants~: 
+\begin{minipage}{0.35\textwidth}
+\begin{center}
+%\fbox{
+\begin{tikzpicture}[scale=0.5,every node/.style={scale=0.5}]
+	%Points
+	\coordinate(A)at(3,1);
+	\coordinate(B)at(5,5);
+	\coordinate(C)at(4,3);
+	\coordinate(D)at(4,-5);
+	\coordinate(E)at(-7,4);
+	\coordinate(F)at(-5,0);
+	\coordinate(G)at(0,-3);
+	\coordinate(H)at(0,7);
+%
+	\repereOIJ{-8}{8}{-8}{8};
+%
+	% Étiquettes
+	\foreach \point in {A, ..., H}
+		\draw(\point)node{$\times$};
+	\foreach \point in {A, ..., H}
+		\draw(\point)node[below right]{$\point$};	
+	\foreach \r in {5}
+    	\draw[thick, below right] (\r,0) node{\r};
+	\foreach \r in {5}
+    	\draw[thick, above left] (0,\r) node{\r};
+\end{tikzpicture}
+%}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.1\textwidth}
+	\begin{enumerate}[]
+		\item $A(~~~~~,~~~~~)$
+		\item $B(~~~~~,~~~~~)$
+		\item $C(~~~~~,~~~~~)$
+		\item $D(~~~~~,~~~~~)$
+		\item $E(~~~~~,~~~~~)$
+		\item $F(~~~~~,~~~~~)$
+		\item $G(~~~~~,~~~~~)$
+		\item $H(~~~~~,~~~~~)$
+	\end{enumerate}
+\end{minipage}
+\exercice Placer un point connaissant ses coordonnées~:
+\begin{minipage}{0.35\textwidth}
+\begin{center}
+%\fbox{
+\begin{tikzpicture}[scale=0.5,every node/.style={scale=0.5}]
+	%Points
+	\coordinate(A)at(5,3);
+	\coordinate(B)at(-2,3);
+	\coordinate(C)at(-2,-4);
+	\coordinate(D)at(6,2);
+	\coordinate(E)at(7,-4);
+	\coordinate(F)at(6,0);
+	\coordinate(G)at(0,3);
+	\coordinate(H)at(0,-7);
+%
+	\repereOIJ{-8}{8}{-8}{8};
+%
+	% Étiquettes
+%
+%	Réponses
+%	\foreach \point in {A, ..., H}
+%		\draw(\point)node{$\times$};
+%	\foreach \point in {A, ..., H}
+%		\draw(\point)node[below right]{$\point$};	
+	\foreach \r in {5}
+    	\draw[thick, below right] (\r,0) node{\r};
+	\foreach \r in {5}
+    	\draw[thick, above left] (0,\r) node{\r};
+\end{tikzpicture}
+%}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.1\textwidth}
+	\begin{enumerate}[]
+		\item $A(~~5~,~3~)$
+		\item $B(~-2~,~3~)$
+		\item $C(-2,-4)$
+		\item $D(~~6~,~~2~)$
+		\item $E(~~7~,~-4)$
+		\item $F(~~6~,~~0~)$
+		\item $G(~~0~,~~3~)$
+		\item $H(~~0~,-7)$
+	\end{enumerate}
+\end{minipage}

@@ -1,0 +1,54 @@
+\documentclass[a4paper,10pt,twocolumn,landscape]{article}
+
+\usepackage{superpack2015}
+
+\usepackage[heightrounded]{geometry}	% heightrounded permet d'afficher les footers correctement
+\geometry{hmargin=0.5cm,vmargin=1.5cm}
+
+\setlength{\columnseprule}{0.1pt}		% Ligne séparatrice milieu document
+\setlength{\columnsep}{20pt}			% Espace de chaque côté de la ligne
+\setlength{\headsep}{10pt}
+\addtolength{\textheight}{15pt}
+%\setlength{\textwidth}{770pt}
+%\setlength{\hoffset}{20pt}
+\setlength{\voffset}{0pt}
+
+\classichf
+	% Nom du style
+	{premierepage}
+	% Hauteur sous header
+	% 14.5pt si une ligne (1 \baselineskip)
+	% 29.0pt si deux lignes (2 \baselineskip)
+	{14.5pt}
+	% Head
+	{\begin{minipage}{0.5\textwidth}\begin{center}\textbf{Retrouvez le repère initial}\end{center}\end{minipage}}
+	{}
+	{\begin{minipage}{0.5\textwidth}\begin{center}\textbf{Retrouvez le repère initial}\end{center}\end{minipage}}
+	% Foot
+	{}
+	{}
+	{}
+
+%\usepackage{showframe}
+%\usepackage{layout}
+
+%\usepackage{siunitx}
+
+\begin{document}
+\pagestyle{premierepage}	%\thispagestyle{premierepage} pour isoler des styles de pages
+
+\input{cherche-repere}
+\newpage
+\input{cherche-repere}
+
+\end{document}
+
+
+%
+%%\exercicebareme{4}
+%\exercicebareme{6}
+%\exercicebareme{10}
+%\exerciceunpoint
+%\exercicebonus
+%\FIN
+%\hrulefill

@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=0.7,yscale=3,every node/.style={scale=1}]
+\tkzInit[xmax=24,xstep=1,ymax=3,ystep=1]
+\tkzGrid[sub,
+		subxstep=0.25,
+		color=gray]
+\tkzLabelX
+\tkzDrawX[label={\textit{heure le 28/10/2015}},above left=18pt,fill=white]
+\tkzLabelY
+\tkzDrawY[label={\textit{hauteur d'eau du Gardon d'Al\`es}},below right=8pt]
+\draw plot[smooth] file {ales.table.suite};
+\tkzAxeX[label=$t$,right=10pt]
+\tkzAxeY[label=$h(t)$]
+\tkzText(11.8,2.2){$\mathcal{C}_{h}$}
+\end{tikzpicture}

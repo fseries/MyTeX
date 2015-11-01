@@ -1,0 +1,85 @@
+\exercice Placez le point $B$, image du point $A$ par la translation de vecteur~\vectaffiche{u}~+~\vectaffiche{v}.
+
+\begin{tikzpicture}[scale=0.7]
+	\placerpoint{A}{0}{0}{below left};
+%	Correction
+%	\vectAu{u}{0}{0}{5}{3}{1pt};
+%	\vectAu{v}{5}{3}{-1}{-3}{1pt};
+	\vectAu{u}{12}{0}{5}{3}{1pt};
+	\vectAu{v}{9}{2}{-1}{-3}{1pt};
+\end{tikzpicture}
+
+\exercice	\begin{enumerate}
+				\item Construisez le point $B$ tel que \vectaffiche{AB} = \vectaffiche{u} + \vectaffiche{v}.
+				\item Construisez le point $C$ tel que \vectaffiche{AC} = \vectaffiche{u} + \vectaffiche{v} + \vectaffiche{w}.
+				\item Construisez le point $D$ tel que \vectaffiche{AD} = \vectaffiche{u} + \vectaffiche{v} $-$ \vectaffiche{w}.\\
+			\end{enumerate}
+
+\begin{tikzpicture}[scale=0.7]
+	\placerpoint{A}{0}{0}{below left};
+%	Correction
+%	\vectAu{u}{0}{0}{10}{3}{1pt};
+%	\vectAu{v}{10}{3}{-5}{1}{1pt};
+%	\vectAu{w}{5}{4}{-1}{-2}{1pt};
+
+	\vectAu{u}{6}{-2}{10}{3}{1pt};
+	\vectAu{v}{4}{5}{-5}{1}{1pt};
+	\vectAu{w}{12}{4}{-1}{-2}{1pt};
+\end{tikzpicture}
+
+
+\exercice Relation de Chasles
+
+\begin{enumerate}
+	\item \vectaffiche{BC} $+$ \vectaffiche{AB} $=$ 
+	\item \vectaffiche{PC} $+$ \vectaffiche{AP} $+$ \vectaffiche{CD} $=$ 
+	\item \vectaffiche{AB} $+$ \vectaffiche{BC} $-$ \vectaffiche{AC} $=$ 
+	\item \vectaffiche{AC} $-$ \vectaffiche{BC} $+$ \vectaffiche{DA} $=$ 
+\end{enumerate}
+
+\exercice Vrai ou faux ?
+	\begin{enumerate}
+%		\item Dire que $PHYS$ est un parallélogramme équivaut à dire que \vectaffiche{PY} $=$ \vectaffiche{PH} $+$ \vectaffiche{PS}
+		\item Dire que $VECT$ est un parallélogramme équivaut à dire que \vectaffiche{VC} $=$ \vectaffiche{VE} $+$ \vectaffiche{CT}
+		\item Dire que $VECT$ est un parallélogramme équivaut à dire que \vectaffiche{ET} $=$ \vectaffiche{EC} $+$ \vectaffiche{EV}
+		\item Dire que $ROND$ est un parallélogramme équivaut à dire que \vectaffiche{RO} $=$ \vectaffiche{ON} $+$ \vectaffiche{ND}
+	\end{enumerate}
+
+\exercice Soit un segment de longueur $l$, on réalise les transformations suivantes~:
+\begin{enumerate}
+	\item[$*$] On sépare le segment en 3 segments de longueurs égales,
+	\item[$*$] On remplace le segment central de longueur $\dfrac{l}{3}$ par un triangle équilatéral de côté $\dfrac{l}{3}$,
+	\item[$*$] On supprime la base du triangle ainsi construit (voir ci-dessous).
+\end{enumerate}
+			
+\vspace*{2em}
+
+
+\begin{center}
+\begin{tikzpicture}
+	\draw (0,0) -- (9,0)
+		node[pos=0.333333]{$|$}
+		node[pos=0.666666]{$|$}
+		node[pos=0.166666,below]{$\dfrac{l}{3}$}
+		node[pos=0.5,below]{$\dfrac{l}{3}$}
+		node[pos=0.833333,below]{$\dfrac{l}{3}$};
+	\draw (0,-5)
+		-- ++ (0:3) %node[midway,above]{$\dfrac{l}{3}$}
+		-- ++ (60:3) %node[midway,above left]{$\dfrac{l}{3}$}
+		-- ++ (-60:3) %node[midway,above right]{$\dfrac{l}{3}$}
+		-- ++ (0:3) %node[midway,above]{$\dfrac{l}{3}$}
+		;
+	\draw[dotted] (3,1) -- (3,-6);
+	\draw[dotted] (6,1) -- (6,-6);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+	\item Quelle est la longueur de la ligne ainsi obtenue~?
+	\item On recommence une fois le processus sur chaque segment de cette ligne.\\ Quelle est la longueur de la ligne obtenue~?
+	\item Peut-on prévoir l'évolution de la longueur si on continue le processus une troisième~fois~? une quatrième fois~? \ldots une centième fois ?
+\end{enumerate}
+
+\vspace*{2em}
+
+\hfill \BONNESVACANCES

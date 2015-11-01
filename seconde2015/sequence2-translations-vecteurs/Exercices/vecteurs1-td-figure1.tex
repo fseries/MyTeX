@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=0.8,every node/.style={scale=1}]
+	\tikzstyle{vect}=[->,>=stealth,very thick]
+	\tikzstyle{vectred}=[vect,red]
+	\tikzstyle{etiquette}=[fill=white,
+							midway,
+							sloped,
+							above]
+								
+\grille{0}{0}{9}{7}{thick};
+
+\coordinate (A) at (2,5);
+\coordinate (B) at (5,6);
+\coordinate (C) at (3,3);
+\coordinate (D) at (5,2);
+\coordinate (E) at (2,1);
+\coordinate (X) at (7,2);
+\coordinate (Y) at (6,4);
+\coordinate (Z) at (8,3);
+\foreach \point in {A, ..., E, X, Y, Z}
+	\draw (\point) node{$\times$} node[below right]{$\point$};
+	
+\draw[vectred] (A) -- (B);
+
+\end{tikzpicture}

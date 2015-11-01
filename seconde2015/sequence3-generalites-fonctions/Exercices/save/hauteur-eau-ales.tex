@@ -1,0 +1,27 @@
+\exercice Reprenons la fonction $h$ évoquée dans l'activité
+
+\begin{tikzpicture}[scale=0.5,yscale=3,every node/.style={scale=0.8}]
+\tkzInit[xmax=24,xstep=1,ymax=3,ystep=1]
+\tkzGrid[sub,
+		subxstep=0.25,
+		color=gray]
+\tkzLabelX
+\tkzDrawX[label={\textit{heure le 28/10/2015}},above left=18pt,fill=white]
+\tkzLabelY
+\tkzDrawY[label={\textit{hauteur d'eau du Gardon d'Al\`es}},below right=8pt]
+\draw plot[smooth] file {ales.table.suite};
+\tkzAxeX[label=$t$,right=10pt]
+\tkzAxeY[label=$h(t)$]
+\tkzText(11.8,2.2){$\mathcal{C}_{h}$}
+\end{tikzpicture}
+
+\begin{enumerate}
+	\item Résoudre graphiquement $h(t) > 2$.
+	\item Déterminer graphiquement les antécédents de $2$ par $h$.
+	\item Déterminer graphiquement $h(22)$.
+	\item Déterminer graphiquement le maximum de la fonction $h$ et la valeur de $t$ pour laquelle on l'obtient.
+	\item Déterminer graphiquement les valeurs de~$t$ pour lesquelles la fonction~$h$ est croissante et celles où la fonction~$h$ est décroissante.
+	\item Exprimer les réponses de la question précédente sous forme d'intervalles de valeurs de $t$.
+	\item Pour chacune des questions précédentes, exprimer en langage courant ce qui est demandé.
+	\item Répondre maintenant aux questions de 1. à \addtocounter{enumi}{-2}\theenumi \addtocounter{enumi}{2}.
+\end{enumerate}

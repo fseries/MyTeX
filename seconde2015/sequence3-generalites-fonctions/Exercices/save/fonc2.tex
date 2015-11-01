@@ -1,0 +1,30 @@
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=0.5,xscale=0.85,yscale=1,scale=1,every node/.style={scale=0.8}]
+
+\draw [color=cqcqcq,dash pattern=on 2pt off 2pt, xstep=3.0cm,ystep=1.0cm] (-0.54,-4.69) grid (13.28,5.75);
+\draw[->,color=black] (-0.54,0) -- (13.28,0);
+\foreach \x in {,1,2,3,4,5,6,7,8,9,10,11,12}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0,-4.69) -- (0,5.75);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4,5}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,0pt) node[fill=white,left] {\footnotesize $0$};
+\clip(-0.54,-4.69) rectangle (13.28,5.75);
+\draw[smooth,samples=100,domain=-0.54:13.28] plot(\x,{0.05833*(\x)^3-1.05*(\x)^2+4.86667*(\x)-4});
+\draw [domain=-0.54:13.28] plot(\x,{(-48--8*\x)/12});
+\draw (4,4) node[anchor=north west] {\Large $f$};
+\draw (7.8,3.3) node[anchor=north west] {\Large $g$};
+\begin{scriptsize}
+\fill [color=qqqqff] (12,4) circle (1.5pt);
+\draw[color=qqqqff] (11.54,4.25) node {$C$};
+%\fill [color=qqqqff] (2,2) circle (1.5pt);
+%\draw[color=qqqqff] (2.14,1.87) node {$E$};
+\fill [color=qqqqff] (6,0) circle (1.5pt);
+\draw[color=qqqqff] (6.1,0.5) node {$B$};
+%\fill [color=qqqqff] (10,-2) circle (1.5pt);
+%\draw[color=qqqqff] (10.11,-2.14) node {$D$};
+\fill [color=qqqqff] (0,-4) circle (1.5pt);
+\draw[color=qqqqff] (0.24,-4.22) node {$A$};
+\end{scriptsize}
+\end{tikzpicture}

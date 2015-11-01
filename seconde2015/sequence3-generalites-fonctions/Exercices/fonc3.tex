@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=0.75,xscale=1,every node/.style={scale=0.75}]
+%\tkzSetUpPoint[shape=cross,size=20pt,color=teal,fill=teal]
+\tkzInit[xmin=-7.5,xmax=8.75,xstep=1, ymin=-6,ymax=2]
+\tkzGrid[sub,subxstep=1,subystep=1]
+\tkzAxeXY
+\tkzFct[smooth,samples=100,domain = -7.5:8.75]{((\x)+6)*((\x)-6)/((\x)+8)}
+%\tkzFct[samples=2,domain = -7.5:8.75]{-\x-6}
+%\tkzDefPointByFct[draw,ref=A](-6)
+%\tkzLabelPoint[above right](A){$A$}
+%\tkzCrossPoint{A}
+%\tkzDefPointByFct[draw,ref=B](-1)
+%\tkzLabelPoint[above left](B){$B$}
+%\tkzCrossPoint{B}
+%\tkzText(8.5,2.5){$\mathcal{C}_{g}$}
+\tkzText(1.7,-2.7){$\mathcal{C}_{f}$}
+\end{tikzpicture}

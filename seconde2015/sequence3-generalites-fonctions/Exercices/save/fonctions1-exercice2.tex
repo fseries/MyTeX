@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=0.5,yscale=3,every node/.style={scale=0.7}]
+\tkzInit[xmax= 22,xstep=1,ymax=3,ystep=1]
+\tkzGrid[sub]
+\tkzDrawX[label={\textit{heure le 28/10/2015}},above left=18pt,fill=white]
+\tkzLabelY
+\tkzLabelX
+\tkzDrawY[label={\textit{hauteur d'eau du Gardon d'Al\`es}},below right=18pt]
+
+\draw plot[smooth] file {ales.table};
+\end{tikzpicture}

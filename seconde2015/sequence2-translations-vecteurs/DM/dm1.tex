@@ -1,0 +1,77 @@
+\documentclass[a4paper,10pt,twocolumn,landscape]{article}
+
+\usepackage{superpack2015}
+
+\usepackage[heightrounded]{geometry}	% heightrounded permet d'afficher les footers correctement
+\geometry{hmargin=0.5cm,vmargin=1.5cm}
+
+\setlength{\columnseprule}{0.5pt}		% Ligne séparatrice milieu document
+\setlength{\columnsep}{20pt}			% Espace de chaque côté de la ligne
+\setlength{\headsep}{10pt}
+\addtolength{\textheight}{15pt}
+%\setlength{\textwidth}{770pt}
+%\setlength{\hoffset}{20pt}
+\setlength{\voffset}{0pt}
+
+\classichf
+	% Nom du style
+	{sujet}
+	% Hauteur sous header
+	% 14.5pt si une ligne (1 \baselineskip)
+	% 29.0pt si deux lignes (2 \baselineskip)
+	{29pt}
+	% Head
+	{\textbf{Mathématiques\\DM1}}
+	{Vacances de la Toussaint}
+	{}%Séquences 1 et 2\\Repérage dans le plan et vecteurs}
+	% Foot
+	{}
+	{}
+	{}
+
+\classichf
+	% Nom du style
+	{correction}
+	% Hauteur sous header
+	% 14.5pt si une ligne (1 \baselineskip)
+	% 29.0pt si deux lignes (2 \baselineskip)
+	{29pt}
+	% Head
+	{\textbf{Mathématiques\\DM1 -- Éléments de correction}}
+	{Vacances de la Toussaint}
+	{}%Séquences 1 et 2\\Repérage dans le plan et vecteurs}
+	% Foot
+	{}
+	{}
+	{}
+
+%\usepackage{showframe}
+%\usepackage{layout}
+
+%\usepackage{siunitx}
+
+\begin{document}
+\pagestyle{sujet}	%\thispagestyle{premierepage} pour isoler des styles de pages
+
+\def\couleurVect{blue}
+\def\couleurNom{red}
+
+\input{dm1-sujet}
+
+\newpage
+\setcounter{exercice}{0}
+\pagestyle{correction}	%\thispagestyle{premierepage} pour isoler des styles de pages
+
+\input{dm1-correction}
+
+\end{document}
+
+
+%
+%%\exercicebareme{4}
+%\exercicebareme{6}
+%\exercicebareme{10}
+%\exerciceunpoint
+%\exercicebonus
+%\FIN
+%\hrulefill

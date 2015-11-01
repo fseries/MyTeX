@@ -1,0 +1,88 @@
+\documentclass[a4paper,10pt,twocolumn,landscape]{article}
+
+\usepackage{superpack2015}
+
+\usepackage[heightrounded]{geometry}	% heightrounded permet d'afficher les footers correctement
+\geometry{hmargin=0.5cm,vmargin=1.5cm}
+
+\setlength{\columnseprule}{0.1pt}		% Ligne séparatrice milieu document
+\setlength{\columnsep}{20pt}			% Espace de chaque côté de la ligne
+\setlength{\headsep}{10pt}
+\addtolength{\textheight}{15pt}
+%\setlength{\textwidth}{770pt}
+%\setlength{\hoffset}{20pt}
+\setlength{\voffset}{0pt}
+
+\classichf
+	% Nom du style
+	{premierepage}
+	% Hauteur sous header
+	% 14.5pt si une ligne (1 \baselineskip)
+	% 29.0pt si deux lignes (2 \baselineskip)
+	{29pt}
+	% Head
+	{\begin{minipage}{0.5\textwidth}\begin{center}\textbf{Mathématiques\\Questions de cours}\end{center}\end{minipage}}
+	{}
+	{\begin{minipage}{0.5\textwidth}\begin{center}\textbf{Mathématiques\\Questions de cours}\end{center}\end{minipage}}
+	% Foot
+	{}
+	{}
+	{}
+
+%\usepackage{showframe}
+%\usepackage{layout}
+
+%\usepackage{siunitx}
+
+\begin{document}
+\pagestyle{premierepage}	%\thispagestyle{premierepage} pour isoler des styles de pages
+
+Soient $\pointcoord{A}{5}{3}$ et $\pointcoord{B}{4}{6}$ deux points du plan placés dans un repère\rep{O}{I}{J}.
+\input{questions}
+\question Entourer le ou les vecteur(s) opposé(s) à \vectaffiche{AB}.\\[1em]
+\begin{inparaenum}[~]
+	\item \vectaffiche{AB}\hspace*{\stretch{1}}
+	\item $-$\vectaffiche{AB}\hspace*{\stretch{1}}
+	\item $-$\vectaffiche{BA}\hspace*{\stretch{1}}
+	\item \vectaffiche{BA}\hspace*{\stretch{1}}~
+\end{inparaenum}%																\vspace*{\stretch{1}}
+\question Entourer le ou les vecteur(s) égal (égaux) à \vectaffiche{AB}.\\[1em]
+\begin{inparaenum}[~]
+	\item \vectaffiche{AB}\hspace*{\stretch{1}}
+	\item $-$\vectaffiche{AB}\hspace*{\stretch{1}}
+	\item $-$\vectaffiche{BA}\hspace*{\stretch{1}}
+	\item \vectaffiche{BA}\hspace*{\stretch{1}}~
+\end{inparaenum}%																\vspace*{\stretch{1}}
+
+\newpage
+
+\setcounter{question}{0}
+Soient $\pointcoord{A}{7}{8}$ et $\pointcoord{B}{3}{6}$ deux points du plan placés dans un repère\rep{O}{I}{J}.
+\input{questions}
+\question Entourer le ou les vecteur(s) opposé(s) à \vectaffiche{AB}.\\[1em]
+\begin{inparaenum}[~]
+	\item \vectaffiche{BA}\hspace*{\stretch{1}}
+	\item $-$\vectaffiche{BA}\hspace*{\stretch{1}}
+	\item $-$\vectaffiche{AB}\hspace*{\stretch{1}}
+	\item \vectaffiche{AB}\hspace*{\stretch{1}}~
+\end{inparaenum}%																\vspace*{\stretch{1}}
+\question Entourer le ou les vecteur(s) égal (égaux) à \vectaffiche{AB}.\\[1em]
+\begin{inparaenum}[~]
+	\item \vectaffiche{BA}\hspace*{\stretch{1}}
+	\item $-$\vectaffiche{BA}\hspace*{\stretch{1}}
+	\item $-$\vectaffiche{AB}\hspace*{\stretch{1}}
+	\item \vectaffiche{AB}\hspace*{\stretch{1}}~
+\end{inparaenum}%																\vspace*{\stretch{1}}
+
+
+\end{document}
+
+
+%
+%%\exercicebareme{4}
+%\exercicebareme{6}
+%\exercicebareme{10}
+%\exerciceunpoint
+%\exercicebonus
+%\FIN
+%\hrulefill

@@ -1,0 +1,112 @@
+\documentclass[a4paper,12pt,twocolumn,landscape]{article}
+
+\usepackage{superpack2015}
+\usetikzlibrary{decorations.fractals}
+
+\usepackage[heightrounded]{geometry}	% heightrounded permet d'afficher les footers correctement
+\geometry{hmargin=0.5cm,vmargin=1.5cm}
+
+\setlength{\columnseprule}{0.5pt}		% Ligne séparatrice milieu document
+\setlength{\columnsep}{50pt}			% Espace de chaque côté de la ligne
+\setlength{\headsep}{15pt}
+\addtolength{\textheight}{20pt}
+%\setlength{\textwidth}{770pt}
+%\setlength{\hoffset}{20pt}
+
+\classichf
+	% Nom du style
+	{sujet}
+	% Hauteur sous header
+	% 14.5pt si une ligne (1 \baselineskip)
+	% 29.0pt si deux lignes (2 \baselineskip)
+	{14.5pt}
+	% Head
+	{}
+	{\textbf{Exercices : Généralités sur les fonctions}}
+	{}
+	% Foot
+	{}
+	{}
+	{}
+
+%\usepackage{showframe}
+%\usepackage{layout}
+
+\newcommand{\courbeVonKoch}[1]{
+\begin{tikzpicture}[decoration=Koch snowflake]
+	\draw[scale=#1]	decorate{decorate{decorate{decorate{decorate{(0,0) -- (1,0)}}}}};
+\end{tikzpicture}
+}
+\newcommand{\floconVonKoch}[1]{
+\begin{tikzpicture}[decoration=Koch snowflake]
+	\draw[scale=#1]	decorate{decorate{decorate{decorate{decorate{(0,0) -- (1,0) --++ (-120:1) --++ (-240:1)}}}}};
+\end{tikzpicture}
+}
+
+\begin{document}
+\pagestyle{sujet}	%\thispagestyle{premierepage} pour isoler des styles de pages
+
+\input{fonctions1-exercice1}
+%\input{fonctions1-exercice2}
+%\input{fonctions1-exercice3}
+
+\courbeVonKoch{6}
+\floconVonKoch{6}
+
+\begin{tikzpicture}[scale=1,every node/.style={scale=1}]
+
+\foreach \pos/\y in {1/10,2/20,3/30,4/40,5/50,6/60,7/70,8/80,9/90,10/100}
+\fill[color=blue!\y](\pos,0) circle (0.5cm) ;
+
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1,every node/.style={scale=1}]
+
+\node {racine}[grow=up] child foreach \name in {a,b,c,d} {node {\name}} ;
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1,every node/.style={scale=1}]
+\tikzstyle{omega}=[circle,draw,fill=red!50]
+\tikzstyle{face}=[circle,draw,fill=yellow!50]
+\tikzstyle{pile}=[circle,draw,fill=blue!50]
+\tikzstyle{espaces}=[level 1/.style={level distance=2cm,sibling distance=4cm},level 2/.style={level distance=2cm,sibling distance=2cm}]
+
+\node[omega] {$\Omega$} [espaces,grow=right]
+child {node[face] {$F$}
+child {node[face] {$F$}}
+child {node[pile] {$P$}}}
+child {node[pile] {$P$}
+child {node[face] {$F$}}
+child {node[pile] {$P$}}
+};
+\end{tikzpicture}
+
+
+%\begin{tikzpicture}[decoration=Koch snowflake]
+%	
+%\foreach \x in {1, ..., 3}
+%	\draw[scale=\x]	decorate{
+%					decorate{
+%					decorate{
+%					decorate{
+%					(0,0) -- (1,0) --++ (-120:1) --++ (-240:1)
+%					}
+%					}					}
+%					};
+%\end{tikzpicture}
+
+\end{document}
+
+
+%
+%%\exercicebareme{4}
+%\exercicebareme{6}
+%\exercicebareme{10}
+%\exerciceunpoint
+%\exercicebonus
+%\FIN
+%\BONNESVACANCES
+%\BONCOURAGE
+%\hrulefill

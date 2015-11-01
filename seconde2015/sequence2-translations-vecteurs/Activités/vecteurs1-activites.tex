@@ -1,0 +1,81 @@
+\documentclass[a4paper,12pt,twocolumn,landscape]{article}
+
+\usepackage{superpack2015}
+
+\usepackage{vecteurs1-activite4-zellige-numero}	% Activité pavage Zellige
+
+\usepackage[heightrounded]{geometry}	% heightrounded permet d'afficher les footers correctement
+\geometry{hmargin=0.5cm,vmargin=1.5cm}
+
+\setlength{\columnseprule}{0.5pt}		% Ligne séparatrice milieu document
+\setlength{\columnsep}{50pt}			% Espace de chaque côté de la ligne
+\setlength{\headsep}{15pt}
+\addtolength{\textheight}{40pt}
+%\setlength{\textwidth}{770pt}
+%\setlength{\hoffset}{20pt}
+
+\classichf
+	% Nom du style
+	{activite}
+	% Hauteur sous header
+	% 14.5pt si une ligne (1 \baselineskip)
+	% 29.0pt si deux lignes (2 \baselineskip)
+	{14.5pt}
+	% Head
+	{}
+	{\textbf{Activités : Les vecteurs}}
+	{}
+	% Foot
+	{}
+	{}
+	{}
+
+\classichf
+	% Nom du style
+	{activite-reponses}
+	% Hauteur sous header
+	% 14.5pt si une ligne (1 \baselineskip)
+	% 29.0pt si deux lignes (2 \baselineskip)
+	{14.5pt}
+	% Head
+	{}
+	{\textbf{Activités : Les vecteurs (réponses)}}
+	{}
+	% Foot
+	{}
+	{}
+	{}
+
+\renewcommand{\vect}[9]{
+	\coordinate(#1) at (#3,#4);
+	\coordinate(#2) at (#5,#6);
+	\draw (#1) -- (#2) node [fill=white,midway,above,sloped] {
+	%$\textcolor{#9}{\overrightarrow{#1#2}}$
+	};
+	\draw (#1) node [fill=white,#7] {#1};
+	\draw (#2) node [fill=white,#8] {#2};
+	\draw [->,>=stealth,line width=1.5pt] (#1) -- (#2);
+}
+
+
+\begin{document}
+
+\thispagestyle{activite}
+\input{vecteurs1-activite123-sujet}
+
+\newpage
+\thispagestyle{activite}
+
+\input{vecteurs1-activite4}
+
+\newpage
+
+\thispagestyle{activite-reponses}
+\input{vecteurs1-activite123-reponses}
+
+\newpage
+
+\thispagestyle{activite-reponses}
+\input{vecteurs1-activite4-reponses}
+
+\end{document}

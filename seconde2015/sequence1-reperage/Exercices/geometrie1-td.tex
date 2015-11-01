@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt,twocolumn,landscape]{article}
+
+\usepackage{superpack2015}
+
+\usepackage[heightrounded]{geometry}	% heightrounded permet d'afficher les footers correctement
+\geometry{hmargin=0.5cm,vmargin=1.5cm}
+
+\setlength{\columnseprule}{0.5pt}		% Ligne séparatrice milieu document
+\setlength{\columnsep}{50pt}			% Espace de chaque côté de la ligne
+\setlength{\headsep}{15pt}
+\addtolength{\textheight}{20pt}
+%\setlength{\textwidth}{770pt}
+%\setlength{\hoffset}{20pt}
+
+\classichf
+	% Nom du style
+	{singlepage}
+	% Hauteur sous header
+	% 14.5pt si une ligne (1 \baselineskip)
+	% 29.0pt si deux lignes (2 \baselineskip)
+	{14.5pt}
+	% Head
+	{}
+	{\textbf{Exercices : Repérage dans le plan}}
+	{}
+	% Foot
+	{}
+	{}
+	{}
+
+\classichf
+	% Nom du style
+	{doublepage}
+	% Hauteur sous header
+	% 14.5pt si une ligne (1 \baselineskip)
+	% 29.0pt si deux lignes (2 \baselineskip)
+	{14.5pt}
+	% Head
+	{\textbf{Exercices : Repérage dans le plan}}
+	{}
+	{\textbf{Exercices : Repérage dans le plan}}
+	% Foot
+	{}
+	{}
+	{}
+
+%\usepackage{showframe}
+%\usepackage{layout}
+
+\begin{document}
+%
+% Exercices 1 et 2
+%
+\pagestyle{doublepage}	%\thispagestyle{premierepage} pour isoler des styles de pages
+\input{geometrie1-td-exercice1}
+\newpage
+\addtocounter{exercice}{-2}
+\input{geometrie1-td-exercice1}
+\newpage
+%
+% Exercice 3
+%
+\pagestyle{doublepage}	%\thispagestyle{premierepage} pour isoler des styles de pages
+\input{geometrie1-td-exercice2}
+\newpage
+\addtocounter{exercice}{-1}
+\input{geometrie1-td-exercice2}
+%
+% Exercice 4
+%
+\newpage
+\input{geometrie1-td-exercice3}
+\newpage
+\addtocounter{exercice}{-1}
+\input{geometrie1-td-exercice3}
+%
+% Exercice 5, 6, 7 et 8
+%
+\newpage
+\pagestyle{singlepage}
+\input{geometrie1-td-exercice4}
+%
+% Exercice 9
+%
+\newpage
+\pagestyle{doublepage}
+\input{cherche-repere}
+\newpage
+\addtocounter{exercice}{-1}
+\input{cherche-repere}
+
+
+
+
+
+\end{document}
+
+
+%
+%%\exercicebareme{4}
+%\exercicebareme{6}
+%\exercicebareme{10}
+%\exerciceunpoint
+%\exercicebonus
+%\FIN
+%\BONNESVACANCES
+%\hrulefill
