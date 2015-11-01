@@ -1,0 +1,25 @@
+\newcommand{\rouge}[1]{\textbf{\textcolor{red}{#1}}}
+\newcommand{\reponseIP}[1]{\textcolor{red}{#1}}
+\newcommand{\reponseEX}[1]{\textcolor{red}{#1}}
+
+\DecimalMathComma % Ajouté 6 sept 2015
+
+\newcounter{question}
+\newcommand{\question}{\stepcounter{question}\paragraph*{Question \thequestion}~}
+
+\newcounter{activite}
+\newcommand{\activite}{\stepcounter{activite}\paragraph*{Activité \theactivite}~}
+
+\newcounter{probleme}
+\newcommand{\probleme}{\stepcounter{probleme}\paragraph*{Problème \theprobleme}~}
+
+\newcounter{exercice}
+\newcommand{\exercice}{\stepcounter{exercice}\paragraph*{Exercice \theexercice}~}
+
+\newcommand{\exerciceprime}{\paragraph*{Exercice \theexercice '}~}
+
+\newcommand{\exerciceunpoint}{\exercice\hfill \emph{1 point}}
+\newcommand{\exercicebareme}[1]{\exercice\hfill \emph{#1 points}}
+\newcommand{\exercicebonus}{\exercice\hfill \emph{Bonus}}
+
+

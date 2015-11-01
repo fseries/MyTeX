@@ -1,0 +1,95 @@
+\RequirePackage[utf8x]{inputenc}
+\RequirePackage[frenchb]{babel}
+\RequirePackage{graphicx}
+\RequirePackage{amsfonts}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{enumerate}
+			
+%\RequirePackage{array}		
+%\RequirePackage[all]{xypic}
+%\RequirePackage{url}				%base package for URL support
+%\urlstyle{rm}					%URLs in times roman instead of courier
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+%\RequirePackage{float}
+%\RequirePackage[table]{xcolor}
+
+%\newcommand{\me}{Fabien \textsc{S\'eries}}
+\usepackage{pgf,tikz}
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows}
+\usepackage{array}
+\usepackage{mathrsfs}
+\newcolumntype{M}[1]{>{\centering}m{#1}}
+\usepackage{eurosym}
+\usepackage{rotating}
+
+%\RequirePackage[top=10mm, bottom=30mm, left=30mm, right=30mm]{geometry}
+%\RequirePackage{listings}
+%\RequirePackage{multirow}
+
+%\RequirePackage[nottoc,
+%			%notlof,
+%			%notlot
+%			]{tocbibind}
+%\RequirePackage[ps2pdf,						%driver
+%			linktocpage=false,
+%			colorlinks=true,			%no frame around URL
+%			urlcolor=magenta,			%black green cyan red magenta 	
+%			menucolor=red,
+%			linkcolor=black,
+%			linktoc=all,
+%			bookmarks=true,				%tree-like TOC
+%			bookmarksopen=true,			%expanded when starting
+%			bookmarksnumbered=true,
+%			hyperfootnotes=false,		%no referencing of footnotes, does not compile
+%			pdfpagemode=UseOutlines,	%show the bookmarks when starting the pdf viewer
+%			pdfdisplaydoctitle=true,
+%			pdfstartview={FitH},
+%			pdfauthor={Fabien SERIES},
+%			pdftitle={~},
+%			pdfsubject={~},
+%			pdfcreator={LaTeX},
+%			pdfkeywords={~},
+%			pdfproducer={Texmaker},
+%			%pdfpagetransition=Dissolve
+%			]{hyperref}
+
+%\author{\textbf{Fabien S\'ERIES}}
+%\date{\textbf{\today}}
+
+%\setlength{\topmargin}{-5pt}
+%\setlength{\voffset}{-50pt}
+%\setlength{\textheight}{26cm}
+%\setlength{\headheight}{0pt}
+%\setlength{\footskip}{0pt}
+
+%\setlength{\hoffset}{-18pt}        
+%\setlength{\oddsidemargin}{0pt}		% Marge gauche sur pages impaires
+%\setlength{\evensidemargin}{9pt}	% Marge gauche sur pages paires
+%\setlength{\marginparwidth}{54pt}	% Largeur de note dans la marge
+%\setlength{\textwidth}{481pt}		% Largeur de la zone de texte (17cm)
+%\setlength{\voffset}{-18pt}			% Bon pour DOS
+%\setlength{\marginparsep}{7pt}		% Séparation de la marge
+%\setlength{\topmargin}{0pt}			% Pas de marge en haut
+%\setlength{\headheight}{13pt}		% Haut de page
+%\setlength{\headsep}{10pt}			% Entre le haut de page et le texte
+%\setlength{\footskip}{27pt}			% Bas de page + séparation
+%\setlength{\textheight}{708pt}		% Hauteur de la zone de texte (25cm)
+
+\newcommand{\rouge}[1]{\textbf{\textcolor{red}{#1}}}
+\newcommand{\reponseIP}[1]{\textcolor{red}{#1}}
+\newcommand{\reponseEX}[1]{\textcolor{red}{#1}}
+
+\DecimalMathComma % Ajouté 6 sept 2015
+
+\newcounter{exercice}
+\newcommand{\exercice}{\stepcounter{exercice}\paragraph*{Exercice \theexercice}~}
+
+\newcommand{\exerciceunpoint}{\exercice\hfill \emph{1 point}}
+\newcommand{\exercicebareme}[1]{\exercice\hfill \emph{#1 points}}
+\newcommand{\exercicebonus}{\exercice\hfill \emph{Bonus}}
+
+\newcounter{activite}
+\newcommand{\activite}{\stepcounter{activite}\paragraph*{Activité \theactivite}~}

@@ -1,0 +1,90 @@
+\usetikzlibrary{fadings}
+\newcommand{\Fin}{
+node[xshift=-1.5ex,rotate=10]{F}
+node[rotate=170]{i}
+node[xshift=1.5ex,rotate=45]{n}
+}
+
+\newcommand{\bonnesvacances}{
+node[xshift=0ex,rotate=10]{B}
+node[xshift=1*1.5ex,rotate=170]{o}
+node[xshift=2*1.5ex,rotate=45]{n}
+node[xshift=3*1.5ex,rotate=128]{n}
+node[xshift=4*1.5ex,rotate=75]{e}
+node[xshift=5*1.5ex,rotate=130]{s}
+node[xshift=6*1.5ex,rotate=85]{~}
+node[xshift=7*1.5ex,rotate=128]{v}
+node[xshift=8*1.5ex,rotate=43]{a}
+node[xshift=9*1.5ex,rotate=4]{c}
+node[xshift=10*1.5ex,rotate=145]{a}
+node[xshift=11*1.5ex,rotate=5]{n}
+node[xshift=12*1.5ex,rotate=25]{c}
+node[xshift=13*1.5ex,rotate=105]{e}
+node[xshift=14*1.5ex,rotate=45]{s}
+}
+
+\newcommand{\boncourage}{
+node[xshift=0ex,rotate=10]{B}
+node[xshift=1*1.5ex,rotate=170]{o}
+node[xshift=2*1.5ex,rotate=45]{n}
+node[xshift=3*1.5ex,rotate=128]{~}
+node[xshift=4*1.5ex,rotate=75]{c}
+node[xshift=5*1.5ex,rotate=130]{o}
+node[xshift=6*1.5ex,rotate=85]{u}
+node[xshift=7*1.5ex,rotate=128]{r}
+node[xshift=8*1.5ex,rotate=43]{a}
+node[xshift=9*1.5ex,rotate=4]{g}
+node[xshift=10*1.5ex,rotate=145]{e}
+node[xshift=11*1.5ex,rotate=5]{~}
+node[xshift=12*1.5ex,rotate=25]{!}
+}
+
+\newcommand{\autravail}{
+node[xshift=0ex,rotate=10]{A}
+node[xshift=1*1.5ex,rotate=30]{u}
+node[xshift=2*1.5ex,rotate=45]{~}
+node[xshift=3*1.5ex,rotate=18]{t}
+node[xshift=4*1.5ex,rotate=75]{r}
+node[xshift=5*1.5ex,rotate=30]{a}
+node[xshift=6*1.5ex,rotate=85]{v}
+node[xshift=7*1.5ex,rotate=-18]{a}
+node[xshift=8*1.5ex,rotate=-43]{i}
+node[xshift=9*1.5ex,rotate=4]{l}
+node[xshift=11*1.5ex,rotate=5]{~}
+node[xshift=12*1.5ex,rotate=-25]{!}
+}
+
+\newcommand{\FIN}{
+	\begin{center}
+	\begin{tikzpicture}[scale=2,transform shape]
+	\draw (0,0) \Fin;
+	\draw (-1em,-1ex) -- (1em,-1ex);
+	\path[scope fading=south] (-1em,-0.25em) rectangle (1em,-3.75ex);
+	\draw[yscale=-1] (0,2ex) \Fin;
+	\end{tikzpicture}
+	\end{center}
+}
+\newcommand{\BONNESVACANCES}{
+	\begin{tikzpicture}[scale=1,transform shape]
+	\draw (0,0) \bonnesvacances;
+	\draw (-1em,-1ex) -- (10em,-1ex);
+	\path[scope fading=south] (-1em,-0.25em) rectangle (10em,-3.75ex);
+	\draw[yscale=-1] (0,2ex) \bonnesvacances;
+	\end{tikzpicture}
+}
+\newcommand{\BONCOURAGE}{
+	\begin{tikzpicture}[scale=2,transform shape]
+	\draw (0,0) \boncourage;
+	\draw (-1em,-1ex) -- (8.5em,-1ex);
+	\path[scope fading=south] (-1em,-0.25em) rectangle (1em,-3.75ex);
+	\draw[yscale=-1] (0,2ex) \boncourage;
+	\end{tikzpicture}
+}
+\newcommand{\AUTRAVAIL}{
+	\begin{tikzpicture}[scale=2,transform shape]
+	\draw (0,0) \autravail;
+	\draw (-1em,-1ex) -- (8.5em,-1ex);
+	\path[scope fading=south] (-1em,-0.25em) rectangle (1em,-3.75ex);
+	\draw[yscale=-1] (0,2ex) \autravail;
+	\end{tikzpicture}
+}

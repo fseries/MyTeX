@@ -1,0 +1,30 @@
+\newcommand{\milieu}[6]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{B_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{$\pointcoord{M_{\theenumi}}{#5}{#6}$}}
+
+\newcommand{\extremite}[6]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{M_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{$\pointcoord{B_{\theenumi}}{#5}{#6}$}}
+
+\newcommand{\longueur}[5]{$\pointcoord{A_{\theenumi}}{#1}{#2}$ et $\pointcoord{B_{\theenumi}}{#3}{#4}$ \hfill \reponseEX{Longueur $A_{\theenumi}B_{\theenumi}$ = $#5$}}
+
+\newcommand{\quadrilatere}[9]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_\theenumi}{#3}{#4}$ $\pointcoord{C_{\theenumi}}{#5}{#6}$, $\pointcoord{D_\theenumi}{#7}{#8}$ \\ \textcolor{red}{$A_{\theenumi}B_{\theenumi}C_{\theenumi}D_{\theenumi}$ est un #9.}}
+
+\newcommand{\parallelogrammeManqueA}[8]{$\pointcoord{B_{\theenumi}}{#1}{#2}$, $\pointcoord{C_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{A_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueB}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{C_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{B_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueC}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_{\theenumi}}{#3}{#4}$ $\pointcoord{D_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{C_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\parallelogrammeManqueD}[8]{$\pointcoord{A_{\theenumi}}{#1}{#2}$, $\pointcoord{B_{\theenumi}}{#3}{#4}$ $\pointcoord{C_{\theenumi}}{#5}{#6}$ \hfill \textcolor{red}{$\pointcoord{D_{\theenumi}}{#7}{#8}$}}
+
+\newcommand{\quelconqueparallelogramme}[8]{
+\coordinate (A) at (#1,#2);
+\coordinate (B) at (#3,#4);
+\coordinate (C) at (#5,#6);
+\coordinate (D) at (#7,#8);
+%\foreach \point in {A, ..., D}
+%	\draw (\point) node{$\point$};
+\draw[thick,blue] (A) -- (B) -- (C) -- (D) -- cycle;
+\coordinate (I) at  (#1/2+#3/2,#2/2+#4/2);
+\coordinate (J) at  (#3/2+#5/2,#4/2+#6/2);
+\coordinate (K) at  (#5/2+#7/2,#6/2+#8/2);
+\coordinate (L) at  (#7/2+#1/2,#8/2+#2/2);
+\draw[thick,red] (I) -- (J) -- (K) -- (L) -- cycle;
+}

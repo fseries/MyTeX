@@ -1,0 +1,52 @@
+\newcommand{\repere}[6]{
+%\begin{tikzpicture}[scale=0.5,every node/.style={scale=0.5}]
+%
+%Coordonnées extrèmes du graphique
+\newcommand{\xstart}{#1}
+\newcommand{\xend}{#2}
+\newcommand{\ystart}{#3}
+\newcommand{\yend}{#4}
+%
+%Points
+%\clip (-0.5,-0.5) rectangle (6.5,6.5);
+\coordinate(O)at(0,0);
+\coordinate(I)at(1,0);
+\coordinate(J)at(0,1);
+\coordinate(xstart)at(\xstart,0);
+\coordinate(xend)at(\xend,0);
+\coordinate(ystart)at(0,\ystart);
+\coordinate(yend)at(0,\yend);
+%
+%\coordinate(A)at(3,1);
+%\coordinate(B)at(5,5);
+%\coordinate(C)at(4,3);
+%\coordinate(D)at(4,-5);
+%\coordinate(E)at(-7,4);
+%\coordinate(F)at(-5,0);
+%\coordinate(G)at(0,-3);
+%\coordinate(H)at(0,7);
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Repère
+\draw [>=stealth,->] (O) -- (I) node[pos=0, below right] {$0$} node[pos=1, below right] {$1$};
+\draw [>=stealth,->] (O) -- (J) node[pos=1, above left] {$1$};
+%Axes
+\draw [>=stealth,->,thick] (xstart) -- (xend) node[pos=1, below right] {$x$};
+\draw [>=stealth,->,thick] (ystart) -- (yend) node[pos=1, above left] {$y$};
+%Grille
+\draw [thin] (\xstart,\ystart)grid(\xend,\yend);
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%étiquettes
+%\foreach \point in {A, ..., H}
+%	\draw(\point)node{$\times$};
+%\foreach \point in {A, ..., H}
+%	\draw(\point)node[below right]{$\point$};	
+\foreach \r in {#5}
+    	\draw[thick, below right] (\r,0) node{\r};
+\foreach \r in {#6}
+    	\draw[thick, above left] (0,\r) node{\r};
+%
+%
+%\end{tikzpicture}
+}

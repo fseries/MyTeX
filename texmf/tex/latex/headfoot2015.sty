@@ -1,0 +1,59 @@
+% Plain est vide
+%\fancypagestyle{plain}{
+%\fancyhf{}
+%}
+\newcommand{\classichf}[8]{
+\fancypagestyle{#1}{
+		\setlength{\headheight}{#2}
+		\fancyhf{}
+
+		\lhead[]{#3}
+		\chead[]{#4}
+		\rhead[]{#5}
+	
+		\lfoot[]{#6}
+		\cfoot[]{#7}
+		\rfoot[]{#8}
+	%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+	}
+}
+\newcommand{\emptyhf}{
+		\pagestyle{empty}
+		\setlength{\headheight}{0em}
+		\setlength{\columnseprule}{0pt}		% Ligne séparatrice milieu document
+}
+%\newcommand{\emptyheadfoot}{
+%	\fancypagestyle{vide}
+%	{
+%		\setlength{\headheight}{0em}
+%		\pagestyle{fancyplain}
+%		\def\headrulewidth{0em}
+%		\fancyhf{}
+%		\lhead[]{}
+%		\chead[]{}
+%		\rhead[]{}
+%		
+%		\lfoot[]{}
+%		\cfoot[]{}
+%		\rfoot[]{}
+%	%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+%	}
+%}
+%\newcommand{\otherheadfoot}[8]{
+%\fancypagestyle{#1}{
+%		\setlength{\headheight}{#2}
+%		\fancyhf{}
+%		\fancyfoot[C]{\bfseries \thepage} % except the center
+%		\renewcommand{\headrulewidth}{0.4pt}
+%		\renewcommand{\footrulewidth}{0.4pt}
+%
+%		\lhead[]{#3}
+%		\chead[]{#4}
+%		\rhead[]{#5}
+%	
+%		\lfoot[]{#6}
+%		\cfoot[]{#7}
+%		\rfoot[]{#8}
+%	%	\rfoot[]{Page \thepage~ sur \pageref{LastPage}}
+%	}
+%}
